@@ -1,3 +1,4 @@
+//Samuel Notario Saez
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -37,6 +38,7 @@ public class MainWindow extends JFrame {
     private JTextArea estadoText;//Poner en la interfaz
     private JLabel erroresJField; //Poner en la interfaz
     private JLabel estadoJLabel; //Poner en la interfaz
+    private JButton PesoTotal;
 
 //---------------------------------------------------------
 
@@ -152,6 +154,15 @@ public class MainWindow extends JFrame {
 
 
         );
+        PesoTotal.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setTitle("Peso Total Del Hub ");
+                setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                JOptionPane.showMessageDialog(null,matriz.pesoTotalHub());
+                setVisible(true);
+            }
+        });
     }
 
 

@@ -1,3 +1,4 @@
+//Samuel Notario Saez
 public class Hub {
     private Contenedores[][] c;
     private static int nContenedor = 1;  //asignaremos este ID a cada contenedor antes de apila
@@ -129,6 +130,17 @@ public class Hub {
         }
         return q;
 
+    }
+
+    public int pesoTotalHub(){
+        int pt=0;
+        for(int i=0;i<c.length;i++){
+            for (int j = 0; j <c.length; j++) {
+                pt=pt+c[i][j].getPesoC();
+
+            }
+        }
+        return pt;
     }
 
 
